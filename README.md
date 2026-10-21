@@ -22,7 +22,7 @@ Pastikan sudah terpasang:
 
 ```bash
 git clone https://github.com/fahmiarya/Article-Backend.git
-cd Backend
+cd Article-Backend
 ```
 
 ### 2. Configure Environment
