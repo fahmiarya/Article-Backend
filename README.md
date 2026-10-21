@@ -21,7 +21,7 @@ Pastikan sudah terpasang:
 ### 1. Clone Repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/fahmiarya/Article-Backend.git
 cd Backend
 ```
 
@@ -39,9 +39,10 @@ Pastikan konfigurasi database sesuai dengan service MySQL pada Docker Compose:
 DB_HOST=db
 DB_PORT=3306
 DB_USER=root
-DB_PASS=root
+DB_PASS=change_me
 DB_NAME=article
 APP_PORT=8080
+MYSQL_ROOT_PASSWORD=change_me
 ```
 
 Sesuaikan nilainya dengan konfigurasi di `compose.yaml` atau `docker-compose.yml` jika berbeda.
