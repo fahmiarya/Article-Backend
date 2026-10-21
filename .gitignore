@@ -1,0 +1,27 @@
+# Go build artifacts
+/bin/
+*.exe
+*.out
+*.test
+*.log
+/build/
+vendor/
+
+# IDE / editor files
+.idea/
+.vscode/
+*.swp
+*~
+
+# Environment files (keep credentials out of VCS)
+.env
+.env.*
+
+# Docker artifacts
+docker-compose.override.yml
+docker-compose.yml.tmp
+
+# Miscellaneous
+.DS_Store
+Thumbs.db
+REQUIREMENTS.md

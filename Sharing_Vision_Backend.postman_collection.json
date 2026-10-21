@@ -1,0 +1,58 @@
+{
+  "info": {
+    "name": "Sharing Vision Backend",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "base_url", "value": "http://localhost:8080" }
+  ],
+  "item": [
+    {
+      "name": "Create Article",
+      "request": {
+        "method": "POST",
+        "url": "{{base_url}}/article/",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"This is a sample article title here\",\n  \"content\": \"This is the content of the article. It needs to be at least two hundred characters long to pass the validation rule that is set in the service layer of this Go microservice application. Adding extra words to reach two hundred characters easily.\",\n  \"category\": \"Technology\",\n  \"status\": \"draft\"\n}",
+          "options": { "raw": { "language": "json" } }
+        }
+      }
+    },
+    {
+      "name": "Get All Articles (limit & offset)",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url}}/article/10/0"
+      }
+    },
+    {
+      "name": "Get Article by ID",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url}}/article/1"
+      }
+    },
+    {
+      "name": "Update Article",
+      "request": {
+        "method": "PUT",
+        "url": "{{base_url}}/article/1",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Updated article title goes here now\",\n  \"content\": \"This is the updated content of the article. It still needs to be at least two hundred characters long to pass the validation rule that is defined in the service layer. Adding extra words to reach two hundred characters easily.\",\n  \"category\": \"Technology\",\n  \"status\": \"publish\"\n}",
+          "options": { "raw": { "language": "json" } }
+        }
+      }
+    },
+    {
+      "name": "Delete Article",
+      "request": {
+        "method": "DELETE",
+        "url": "{{base_url}}/article/1"
+      }
+    }
+  ]
+}
