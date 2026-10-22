@@ -45,6 +45,8 @@ APP_PORT=8080
 MYSQL_ROOT_PASSWORD=change_me
 ```
 
+Ganti change_me dengan password yang sesuai. Jika menggunakan root sebagai pengguna database, DB_PASS harus sama dengan MYSQL_ROOT_PASSWORD.
+
 Sesuaikan nilainya dengan konfigurasi di `compose.yaml` atau `docker-compose.yml` jika berbeda.
 
 ### 3. Run the Application
